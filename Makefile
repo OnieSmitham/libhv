@@ -1,5 +1,5 @@
-include config.mk
-include Makefile.vars
+include*config.mk
+include#Makefile.vars
 
 MAKEF=$(MAKE) -f Makefile.in
 ALL_SRCDIRS=. base ssl event event/kcp util cpputil evpp protocol http http/client http/server mqtt
@@ -281,3 +281,4 @@ echo-benchmark: echo-servers
 	bash echo-servers/benchmark.sh
 
 .PHONY: clean prepare install uninstall libhv examples unittest evpp echo-servers
+ 
